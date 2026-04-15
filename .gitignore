@@ -1,0 +1,24 @@
+# Archivos de estado de Terraform (Contienen info sensible de tu infra)
+*.tfstate
+*.tfstate.backup
+*.tfstate.lock.info
+
+# Carpeta de binarios y plugins (Se generan con terraform init)
+.terraform/
+
+# Archivos de variables sensibles
+# (Si guardas contraseñas en archivos .tfvars, no los subas)
+*.tfvars
+# Excepción: puedes subir un archivo de ejemplo
+!example.tfvars
+
+# Logs de error
+*.log
+
+# Archivos de sistema y editores
+.DS_Store
+.vscode/
+.idea/
+
+# Docker
+.docker/
