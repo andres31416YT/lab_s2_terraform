@@ -12,7 +12,7 @@ resource "docker_image" "frontend_img"{
 resource "docker_image" "backend_img"{
     name= "backend-img-${var.entorno}"
     build{
-        context: "../app/backend"
+        context = "../app/backend"
         dockerfile = "Dockerfile.backend"
     }
 }
