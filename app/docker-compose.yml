@@ -4,7 +4,7 @@ services:
     build: 
       context: ./frontend
       dockerfile: Dockerfile.frontend
-    network:
+    networks:
       - app-network
     ports:
     - "4001:80"
@@ -14,7 +14,7 @@ services:
     build:
       context: ./backend
       dockerfile: Dockerfile.backend
-    network:
+    networks:
       - app-network
     ports:
       - "4002:3000"
@@ -25,11 +25,11 @@ services:
     environment:
       MYSQL_ROOT_PASSWORD: rootpassword
       MYSQL_DATABASE: mi_db
-    network:
+    networks:
       - app-network
     ports:
       - "4003:3306"
 
 networks:
-  app-networks:
+  app-network:
     driver: bridge
