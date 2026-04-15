@@ -19,7 +19,7 @@ resource "docker_image" "backend_img"{
 
 resource "docker_container" "frontend"{
     name= "var.prefijo_nombre"
-    image = image.docker_image.image.id
+    image = docker_image.frontend_img.image_id
     ports {
         internal = 80
         external = var.puerto_frontend
