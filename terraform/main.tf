@@ -18,7 +18,7 @@ resource "docker_image" "backend_img"{
 }
 
 resource "docker_container" "frontend"{
-    name= "var.prefijo_nombre"
+    name= var.prefijo_nombre
     image = docker_image.frontend_img.image_id
     ports {
         internal = 80
@@ -43,8 +43,8 @@ resource "docker_container" "db"{
     name = "db01-${var.entorno}"
     image = "mysql:8.0"
     env = [
-        "MYSQL_ROOT_PASSWORD = rootpassword",
-        "MYSQL_DATABASE = mi_db"
+        "MYSQL_ROOT_PASSWORD=rootpassword",
+        "MYSQL_DATABASE=mi_db"
     ]
     ports{
         internal = 3306
