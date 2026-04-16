@@ -1,4 +1,5 @@
 #Ejercicio Semana 2 Infraestructura como codigo
+Version con entrno "localhost"
 #REQUISITOS:
     Docker
     Terraform
