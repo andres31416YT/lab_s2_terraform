@@ -1,5 +1,5 @@
-entorno = "localhost"
-prefijo_nombre = "web-localhost-01"
-puerto_frontend = 4001
-puerto_backend = 4002
-puerto_db = 4003
+entorno = "dev"
+prefijo_nombre = "web-dev-01"
+puerto_frontend = 5001
+puerto_backend = 5002
+puerto_db = 5003
